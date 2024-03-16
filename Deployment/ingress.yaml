@@ -7,7 +7,7 @@ spec:
     - host: fastapi.local
       http:
         paths:
-          - path: /
+          - path: /ping
             pathType: Prefix
             backend:
               service:
