@@ -4,7 +4,7 @@ metadata:
   name: fastapi-app-ingress
 spec:
   rules:
-    - host: fastapi.local:5000
+    - host: fastapi.local
       http:
         paths:
           - path: /
@@ -13,4 +13,4 @@ spec:
               service:
                 name: fastapi-app-service
                 port:
-                  number: 80
+                  number: 5000
