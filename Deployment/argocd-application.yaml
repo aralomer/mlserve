@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-ml-app
+spec:
+  project: default
+  source:
+    repoURL: 'git@github.com:<kullanıcı>/<repo>.git'
+    path: kubernetes
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
