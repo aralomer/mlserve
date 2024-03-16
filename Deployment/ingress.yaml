@@ -4,7 +4,7 @@ metadata:
   name: fastapi-app-ingress
 spec:
   rules:
-    - host: fastapi.local
+    - host: fastapi.local:5000
       http:
         paths:
           - path: /
